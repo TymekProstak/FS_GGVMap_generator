@@ -54,7 +54,8 @@ ax and ay are given in a "velocity V frame" (x-axis along V, and y-axis perpendi
 - pKy1 : cornering stiffness coefficient  
 - pKy2 : cornering stiffness load coefficient  
 - lambda_y : lateral scaling factor  
-- N0 : nominal load (where dfz = 0)  
+- N0 : nominal load (where dfz = 0)
+- Cr : roll friction factor
 
 **OCP formulation:**  
 - u_rho_u :  
