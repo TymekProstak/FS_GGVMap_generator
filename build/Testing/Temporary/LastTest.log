@@ -1,0 +1,84 @@
+Start testing: Sep 15 17:24 CEST
+----------------------------------------------------------
+1/3 Testing: ParamBank.LoadsAndIndexes
+1/3 Test: ParamBank.LoadsAndIndexes
+Command: "/home/tymek/ggv_generator/FS_GGVMap_generator/build/test_params" "--gtest_filter=ParamBank.LoadsAndIndexes" "--gtest_also_run_disabled_tests"
+Directory: /home/tymek/ggv_generator/FS_GGVMap_generator/build
+"ParamBank.LoadsAndIndexes" start time: Sep 15 17:24 CEST
+Output:
+----------------------------------------------------------
+Running main() from /build/googletest-j5yxiC/googletest-1.10.0/googletest/src/gtest_main.cc
+Note: Google Test filter = ParamBank.LoadsAndIndexes
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ParamBank
+[ RUN      ] ParamBank.LoadsAndIndexes
+[       OK ] ParamBank.LoadsAndIndexes (0 ms)
+[----------] 1 test from ParamBank (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ParamBank.LoadsAndIndexes" end time: Sep 15 17:24 CEST
+"ParamBank.LoadsAndIndexes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/3 Testing: CasADi.AxAyWithParams
+2/3 Test: CasADi.AxAyWithParams
+Command: "/home/tymek/ggv_generator/FS_GGVMap_generator/build/test_params" "--gtest_filter=CasADi.AxAyWithParams" "--gtest_also_run_disabled_tests"
+Directory: /home/tymek/ggv_generator/FS_GGVMap_generator/build
+"CasADi.AxAyWithParams" start time: Sep 15 17:24 CEST
+Output:
+----------------------------------------------------------
+Running main() from /build/googletest-j5yxiC/googletest-1.10.0/googletest/src/gtest_main.cc
+Note: Google Test filter = CasADi.AxAyWithParams
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CasADi
+[ RUN      ] CasADi.AxAyWithParams
+[       OK ] CasADi.AxAyWithParams (2 ms)
+[----------] 1 test from CasADi (2 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (2 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"CasADi.AxAyWithParams" end time: Sep 15 17:24 CEST
+"CasADi.AxAyWithParams" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/3 Testing: CasADi.SimpleStandaloneAxAy
+3/3 Test: CasADi.SimpleStandaloneAxAy
+Command: "/home/tymek/ggv_generator/FS_GGVMap_generator/build/test_params" "--gtest_filter=CasADi.SimpleStandaloneAxAy" "--gtest_also_run_disabled_tests"
+Directory: /home/tymek/ggv_generator/FS_GGVMap_generator/build
+"CasADi.SimpleStandaloneAxAy" start time: Sep 15 17:24 CEST
+Output:
+----------------------------------------------------------
+Running main() from /build/googletest-j5yxiC/googletest-1.10.0/googletest/src/gtest_main.cc
+Note: Google Test filter = CasADi.SimpleStandaloneAxAy
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CasADi
+[ RUN      ] CasADi.SimpleStandaloneAxAy
+[       OK ] CasADi.SimpleStandaloneAxAy (0 ms)
+[----------] 1 test from CasADi (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"CasADi.SimpleStandaloneAxAy" end time: Sep 15 17:24 CEST
+"CasADi.SimpleStandaloneAxAy" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Sep 15 17:24 CEST

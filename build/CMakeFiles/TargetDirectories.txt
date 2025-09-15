@@ -1,0 +1,4 @@
+/home/tymek/ggv_generator/FS_GGVMap_generator/build/CMakeFiles/rebuild_cache.dir
+/home/tymek/ggv_generator/FS_GGVMap_generator/build/CMakeFiles/test_params.dir
+/home/tymek/ggv_generator/FS_GGVMap_generator/build/CMakeFiles/edit_cache.dir
+/home/tymek/ggv_generator/FS_GGVMap_generator/build/CMakeFiles/test.dir

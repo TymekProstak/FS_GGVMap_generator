@@ -1,0 +1,5 @@
+if(EXISTS "/home/tymek/ggv_generator/FS_GGVMap_generator/build/test_params[1]_tests.cmake")
+  include("/home/tymek/ggv_generator/FS_GGVMap_generator/build/test_params[1]_tests.cmake")
+else()
+  add_test(test_params_NOT_BUILT test_params_NOT_BUILT)
+endif()

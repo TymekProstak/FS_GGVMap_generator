@@ -1,0 +1,66 @@
+{
+    "vehicle": {
+      "g": 9.81,
+      "m": 230.0,
+      "h": 0.28,
+      "w": 1.53,
+      "b": 0.70,
+      "a": 0.83,
+      "T": 1.20,
+      "K1": 22000.0,
+      "K2": 24000.0,
+      "Cd": 0.60,
+      "Cl1": 0.70,
+      "Cl2": 0.80,
+      "Pmax_drive": 80000.0,
+      "Pmin_recuperation": 30000.0,
+      "Cr": 0.015
+    },
+    "tire": {
+      "pCx1": 1.70,
+      "pDx1": 1.20,
+      "pDx2": -0.10,
+      "pEx1": 0.50,
+      "pKx1": 22.0,
+      "pKx3": 1.0,
+      "lambda_x": 1.0,
+      "pCy1": 1.30,
+      "pDy1": 1.10,
+      "pDy2": -0.05,
+      "pEy1": 0.40,
+      "pKy1": 14.0,
+      "pKy2": 1.6,
+      "lambda_y": 1.0,
+      "N0": 1000.0
+    },
+    "ocp": {
+      "u_rho_u": 2.0,
+      "u_rho_d": -2.0,
+      "u_delta_u": 0.6,
+      "u_delta_d": -0.6,
+      "u_beta_u": 0.4,
+      "u_beta_d": -0.4,
+      "u_kappafl_u": 0.05,
+      "u_kappafl_d": -0.05,
+      "u_kappafr_u": 0.05,
+      "u_kappafr_d": -0.05,
+      "u_kapparr_u": 0.05,
+      "u_kapparr_d": -0.05,
+      "u_kapparl_u": 0.05,
+      "u_kapparl_d": -0.05
+    },
+    "cost": {
+      "epsilon": 1e-3
+    },
+    "bounds": {
+      "delta_u": 0.6,
+      "delta_d": -0.6,
+      "beta_u": 0.6,
+      "beta_d": -0.6,
+      "kappa_u": 0.2,
+      "kappa_d": -0.2,
+      "slip_angle_u": 0.6,
+      "slip_angle_d": -0.6
+    }
+  }
+  

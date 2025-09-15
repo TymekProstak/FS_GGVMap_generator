@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/ParamBank.hpp
+nlohmann/json.hpp
+-
+casadi/casadi.hpp
+-
+unordered_map
+-
+string
+-
+vector
+-
+stdexcept
+-
+cmath
+-
+
+/home/tymek/ggv_generator/FS_GGVMap_generator/test/test_params.cpp
+gtest/gtest.h
+-
+fstream
+-
+nlohmann/json.hpp
+-
+casadi/casadi.hpp
+-
+ParamBank.hpp
+/home/tymek/ggv_generator/FS_GGVMap_generator/test/ParamBank.hpp
+
