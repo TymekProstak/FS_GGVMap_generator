@@ -5,7 +5,7 @@ Implementation is for an all-wheel-driven (AWD/4WD) Formula Student vehicle with
 
 Two alternative models are implemented:  
    - single-track model (e.g. dynamic bicycle model) with MF 1996 and partial load transfer (longitudinal),  
-   - double-track model with MF 1996 and simplified full load transfer (quasi-static roll + longitudinal and lateral), omitting Ackermann geometry.  
+   - double-track model with MF 1996 and simplified full load transfer (quasi-static roll + longitudinal and lateral), omitting full kinetamitc Ackermann geometry, in favour of virtual rack        angle ( delta - steer) .  
 
 ---
 
