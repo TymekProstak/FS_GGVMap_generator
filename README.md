@@ -1,11 +1,11 @@
 # FS_GGVMap_generator
 
-Implementation of GGV map calculation using CasADi and the approach presented in *“An optimal control approach to the computation of g-g diagrams”* (2023) Matteo Massaro et al.  
-Implementation is for an all-wheel-driven (AWD/4WD) Formula Student vehicle with an electric (EV) powertrain.
+Implementation of GGV map calculation using CasADi/Ipopt and the approach presented in *“An optimal control approach to the computation of g-g diagrams”* (2023) Matteo Massaro et al.  
+Implementation is for an all-wheel-driven (AWD/4WD) Formula Student vehicle with an electric (EV) powertrain. 
 
 Two alternative models are implemented:  
    - single-track model (e.g. dynamic bicycle model) with MF 1996 and partial load transfer (longitudinal),  
-   - double-track model with MF 1996 and simplified full load transfer (quasi-static roll + longitudinal and lateral), omitting full kinetamitc Ackermann geometry, in favour of virtual rack        angle ( delta - steer) .  
+   - double-track model with MF 1996 and simplified full load transfer (quasi-static roll + longitudinal and lateral), omitting full kinetamitc Ackermann geometry, in favour of virtual rack        angle ( delta/steer) .  
 
 ---
 
@@ -17,9 +17,10 @@ The problem is formulated as a maximization of the area under the GG envelope fo
 
 Control inputs are: [u_rho, u_delta, u_beta, u_kappa_fl, u_kappa_fr, u_kappa_rr, u_kappa_rl] with box constraints. They represent the vehicle state + rho derivatives with respect to alpha.  
 
-To solve the OCP problem in CasADi, a warm start using results from SPO is utilized, and all control inputs + vehicle state are comprehended into the **X vector** – treated by the solver as the decision vector, **Z vector** – constraints (dynamic equations, box for state/control, and differential formulation for control inputs), and **J** as the cost function.  
+To solve the OCP problem in CasADi, a warm start using results from SPO is utilized, and all control inputs + vehicle state are comprehended into the **X vector** – treated by the solver as the decision vector, **Z vector** – constraints (dynamic equations, box for state/control, and differential formulation for control inputs), and **J_obj** as the cost function.  
 
-ax and ay are given in a "velocity V frame" (x-axis along V, and y-axis perpendicular).  
+ax and ay are given in a "velocity V aligned  frame" (x-axis along V, and y-axis perpendicular).  
+Important to note that it is NOT acceleration in Vehicle frame( due to its rotation by a slip angle of vehicle and due to non-zero yaw rate of vehicle) but acceleration in interial frame aligned with center mass velocity V.
 
 ---
 

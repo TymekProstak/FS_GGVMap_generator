@@ -47,12 +47,16 @@
       "u_kapparr_u": 0.05,
       "u_kapparr_d": -0.05,
       "u_kapparl_u": 0.05,
-      "u_kapparl_d": -0.05
+      "u_kapparl_d": -0.05,
+      "u_kappa_d" : 0.2,
+      "u_kappa_u" : -0.2
+      
     },
     "cost": {
       "epsilon": 1e-3
     },
     "bounds": {
+      "rho_u": 2.0,
       "delta_u": 0.6,
       "delta_d": -0.6,
       "beta_u": 0.6,

@@ -109,6 +109,7 @@ inline ParamBank build_param_bank(const nlohmann::json& J){
 
   // --- Bounds (boxy na stany) ---
   const char* B[] = {
+    "rho_u",
     "delta_u","delta_d","beta_u","beta_d","kappa_u","kappa_d",
     "slip_angle_u","slip_angle_d"
   };
