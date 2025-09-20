@@ -1,4 +1,0 @@
-ParamBank.LoadsAndIndexes 1 0.00377575
-CasADi.AxAyWithParams 1 0.00476664
-CasADi.SimpleStandaloneAxAy 1 0.00265027
----

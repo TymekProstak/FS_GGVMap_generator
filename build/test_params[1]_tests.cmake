@@ -1,7 +1,0 @@
-add_test( ParamBank.LoadsAndIndexes /home/tymek/ggv_generator/FS_GGVMap_generator/build/test_params [==[--gtest_filter=ParamBank.LoadsAndIndexes]==] --gtest_also_run_disabled_tests)
-set_tests_properties( ParamBank.LoadsAndIndexes PROPERTIES WORKING_DIRECTORY /home/tymek/ggv_generator/FS_GGVMap_generator/build)
-add_test( CasADi.AxAyWithParams /home/tymek/ggv_generator/FS_GGVMap_generator/build/test_params [==[--gtest_filter=CasADi.AxAyWithParams]==] --gtest_also_run_disabled_tests)
-set_tests_properties( CasADi.AxAyWithParams PROPERTIES WORKING_DIRECTORY /home/tymek/ggv_generator/FS_GGVMap_generator/build)
-add_test( CasADi.SimpleStandaloneAxAy /home/tymek/ggv_generator/FS_GGVMap_generator/build/test_params [==[--gtest_filter=CasADi.SimpleStandaloneAxAy]==] --gtest_also_run_disabled_tests)
-set_tests_properties( CasADi.SimpleStandaloneAxAy PROPERTIES WORKING_DIRECTORY /home/tymek/ggv_generator/FS_GGVMap_generator/build)
-set( test_params_TESTS ParamBank.LoadsAndIndexes CasADi.AxAyWithParams CasADi.SimpleStandaloneAxAy)
