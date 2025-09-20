@@ -1,6 +1,7 @@
 # FS_GGVMap_generator
 
-Implementation of GGV map calculation using CasADi/Ipopt and the approach presented in *“An optimal control approach to the computation of g-g diagrams”* (2023) Matteo Massaro et al.  
+Implementation of GGV map calculation using CasADi/Ipopt and the approach presented in *A free-trajectory quasi-steady-state optimal-control method for minimum
+lap-time of race vehicles”* (2019) Matteo Massaro et al.  
 Implementation is for an all-wheel-driven (AWD/4WD) Formula Student vehicle with an electric (EV) powertrain. 
 
 Two alternative models are implemented:  
@@ -11,16 +12,11 @@ Two alternative models are implemented:
 
 **Formulation of the problem:**  
 
-Following Matteo Massaro et al. (2023), the state of the vehicle in QSS is uniquely determined by: [delta, beta, kappa_fl, kappa_fr, kappa_rr, kappa_rl] if V (center of mass speed) and ax, ay (ax, ay in vehicle frame) are given → yaw rate is simply V/ay, and the rest is given by QSS equations. Optionally, box constraints on the state can be added to ensure safety of the output (for example to exclude powerslide solutions, or high tire slippage).  
+Following Matteo Massaro et al. (2019), the state of the vehicle in QSS is uniquely determined by: [delta, beta, kappa_fl, kappa_fr, kappa_rr, kappa_rl] if V (center of mass speed) and ax, ay (ax, ay in vehicle frame) are given → yaw rate is simply V/ay, and the rest is given by QSS equations. Optionally, box constraints on the state can be added to ensure safety of the output (for example to exclude powerslide solutions, or high tire slippage).  
 
-The problem is formulated as a maximization of the area under the GG envelope for a given center of mass speed (V). The independent variable is alpha (where ay/ax = tan(alpha)). Rho (radius = sqrt(ax² + ay²)) is simply the magnitude of the acceleration vector. For smoothness of the resultant solution, a small regularization term on the control input is added to the cost function.  
-
-Control inputs are: [u_rho, u_delta, u_beta, u_kappa_fl, u_kappa_fr, u_kappa_rr, u_kappa_rl] with box constraints. They represent the vehicle state + rho derivatives with respect to alpha.  
-
-To solve the OCP problem in CasADi, a warm start using results from SPO is utilized, and all control inputs + vehicle state are comprehended into the **X vector** – treated by the solver as the decision vector, **Z vector** – constraints (dynamic equations, box for state/control, and differential formulation for control inputs), and **J_obj** as the cost function.  
-
-ax and ay are given in a "velocity V aligned  frame" (x-axis along V, and y-axis perpendicular).  
-Important to note that it is NOT acceleration in Vehicle frame( due to its rotation by a slip angle of vehicle and due to non-zero yaw rate of vehicle) but acceleration in interial frame aligned with center mass velocity V.
+The problem is formulated as a maximizaiton of rho ( " adherance radius") which is defined as rho = sqrt ( ax^2 + ay^2). For each alpha = atan(ax/ay) a SPO is solved based on previous solutions, constraints and with cost function J = -rho. Staring solutions is find by Newton's bisection for ay = 0 ( pure longitudal acceleration).
+  
+Important to note that the result  it is NOT acceleration in Vehicle frame( due to its rotation by a slip angle of vehicle and due to non-zero yaw rate of vehicle) but acceleration in interial frame aligned with center mass velocity V.
 
 ---
 
@@ -57,25 +53,6 @@ Important to note that it is NOT acceleration in Vehicle frame( due to its rotat
 - lambda_y : lateral scaling factor  
 - N0 : nominal load (where dfz = 0)
 - Cr : roll friction factor
-
-**OCP formulation:**  
-- u_rho_u :  
-- u_rho_d :  
-- u_delta_u :  
-- u_delta_d :  
-- u_beta_u :  
-- u_beta_d :  
-- u_kappafl_u :  
-- u_kappafl_d :  
-- u_kappafr_u :  
-- u_kappafr_d :  
-- u_kapparr_u :  
-- u_kapparr_d :  
-- u_kapparl_u :  
-- u_kapparl_d :  
-
-**Cost function:**  
-- epsilon : regularization term weight  
 
 **Vehicle state constraints:**  
 - delta_u :  
