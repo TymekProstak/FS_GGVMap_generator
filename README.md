@@ -14,7 +14,7 @@ Two alternative models are implemented:
 
 Following Matteo Massaro et al. (2019), the state of the vehicle in QSS is uniquely determined by: [delta, beta, kappa_fl, kappa_fr, kappa_rr, kappa_rl] if V (center of mass speed) and ax, ay (ax, ay in vehicle frame) are given → yaw rate is simply V/ay, and the rest is given by QSS equations. Optionally, box constraints on the state can be added to ensure safety of the output (for example to exclude powerslide solutions, or high tire slippage).  
 
-The problem is formulated as a maximizaiton of rho ( " adherance radius") which is defined as rho = sqrt ( ax^2 + ay^2). For each alpha = atan(ax/ay) a SPO is solved based on previous solutions, constraints and with cost function J = -rho. Staring solutions is found by Newton's bisection for ay = 0 ( pure longitudal acceleration).
+The problem is formulated as a maximizaiton of rho ("adherance radius") which is defined as rho = sqrt ( ax^2 + ay^2). For each alpha = atan(ax/ay) a SPO is solved based on previous solutions, constraints and with cost function J = -rho. Staring solutions is found by Newton's bisection for ay = 0 (pure longitudal acceleration).
   
 Important to note that the result  it is NOT acceleration in Vehicle frame( due to its rotation by a slip angle of vehicle and due to non-zero yaw rate of vehicle) but acceleration in interial frame aligned with center mass velocity V.
 
